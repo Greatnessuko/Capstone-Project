@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  /* Pale Blue. */
+  --pale-blue-35: hsl(225, 100%, 94%, 0.35);
+  --pale-blue-100: hsl(225, 100%, 98%);
+  --pale-blue-200: hsl(225, 100%, 94%);
+  /* Bright Blue. */
+  --bright-blue-35: hsl(245, 75%, 52%, 0.35);
+  --bright-blue-100: hsl(244, 49%, 72%);
+  --bright-blue-200: hsl(245, 64%, 61%);
+  --bright-blue-300: hsl(245, 75%, 52%);
+  /* Desaturated Blue. */
+  --desat-blue-25: hsla(224, 23%, 55%, 0.25);
+  --desat-blue-100: hsl(224, 23%, 55%);
+  /*  Dark Blue. */
+  --dark-blue-100: hsl(223, 47%, 23%);
+
+  /* Color scheme. */
+  --primary-color: var(--dark-blue-100);
+  --secondary-color: var(--desat-blue-100);
+  --tertiary-color: var(--pale-blue-100);
+  --accent-color: var(--bright-blue-300);
+  --background-color: var(--pale-blue-200);
+  --color-on-background: var(--pale-blue-35);
+  --shadow-color: var(--desat-blue-25);
+  --alt-shadow-color: var(--bright-blue-35);
+
+  /* Text Config. */
+  --base-font-family: "Red Hat Display", sans-serif;
+  --fw-normal: 500;
+  --fw-large: 700;
+  --fw-larger: 900;
+  --fs-title: 1.5rem;
+  --fs-paragraph: 1rem;
+  --fs-subtitle: 0.8rem;
+
+  /* General Sizes. */
+  --size-smallest: 0.25rem;
+  --size-smaller: 0.5rem;
+  --size-small: 0.75rem;
+  --size-normal: 1rem;
+  --size-large: 1.25rem;
+  --size-larger: 1.5rem;
+  --size-largest: 1.75rem;
+
+  /* Root Styles. */
+  font-size: 16px;
+  font-family: var(--base-font-family);
+  font-weight: var(--fw-normal);
+}
+
+.title {
+  font-weight: var(--fw-larger);
+  font-size: var(--fs-title);
+  color: var(--primary-color);
+}
+
+.paragraph {
+  font-weight: var(--fw-normal);
+  font-size: var(--fs-paragraph);
+  color: var(--secondary-color);
+}
+
+.label {
+  font-weight: var(--fw-large);
+  font-size: var(--fs-paragraph);
+  color: var(--primary-color);
+}
+
+a.link {
+  font-weight: var(--fw-larger);
+  font-size: var(--fs-subtitle);
+  color: var(--accent-color);
+  display: inline-block;
+  transition: color 100ms linear;
+}
+
+a.link:is(:hover, :focus) {
+  opacity: 0.65;
+  text-decoration: none;
+}
+
+button.btn {
+  border: 0;
+  display: block;
+  padding: var(--size-normal);
+  border-radius: var(--size-small);
+  font-size: var(--fs-paragraph);
+  font-weight: var(--fw-large);
+  transition: opacity 100ms ease, color 100ms ease, box-shadow 100ms ease;
+}
+
+button.btn.accentric {
+  color: var(--tertiary-color);
+  background: var(--accent-color);
+  box-shadow: 0 var(--size-smaller) var(--size-normal) var(--alt-shadow-color);
+}
+
+button.btn.accentric:is(:hover, :focus) {
+  opacity: 0.65;
+  box-shadow: none;
+}
+
+button.btn.transparent {
+  color: var(--secondary-color);
+  background: transparent;
+}
+
+button.btn.transparent:is(:hover, :focus) {
+  color: var(--primary-color);
+}
+
+.icon {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
